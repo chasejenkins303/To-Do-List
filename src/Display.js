@@ -1,27 +1,28 @@
-import { useState } from "react";
+import Form from './Form'
 
 function Display(){
 
-    const[text, setText]= useState("")
-    const[subtext, setSubtext] = useState("")
-    const updateText = (i) =>{
-        // event.preventDefault()
-        setText(i.target.value)
-    }
-    const submitHandler = (event) =>{
-        event.preventDefault()
-        setSubtext(text)
-        setText("")
-    }
+    // const[text, setText]= useState("")
+    // const[subtext, setSubtext] = useState("")
+    // const updateText = (i) =>{
+    //     // event.preventDefault()
+    //     setText(i.target.value)
+    // }
+    // const submitHandler = (event) =>{
+    //     event.preventDefault()
+    //     setSubtext(text)
+    //     setText("")
+    // }
     return (
         <div className="display-container">
             <div className="display">
                     <h1>To-Do List</h1>
-                    <form onSubmit={submitHandler}>
+                    {/* <form onSubmit={submitHandler}>
                         <input type="text" onChange={updateText} value={text}/>
                         <button type="submit">Submit</button>
                     </form>
-                    <h2>{subtext}</h2>
+                    <h2>{subtext}</h2> */}
+                    <Form/>
             </div>
         </div>
     )
